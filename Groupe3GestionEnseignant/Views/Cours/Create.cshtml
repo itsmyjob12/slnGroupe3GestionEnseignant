@@ -1,0 +1,48 @@
+﻿@model Groupe3GestionEnseignant.Models.ENTITE.Cour
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Cour</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nom" class="control-label"></label>
+                <input asp-for="Nom" class="form-control" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Horaire" class="control-label"></label>
+                <input asp-for="Horaire" class="form-control" />
+                <span asp-validation-for="Horaire" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdClasse" class="control-label"></label>
+                <input asp-for="IdClasse" class="form-control" />
+                <span asp-validation-for="IdClasse" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdEnseignant" class="control-label"></label>
+                <input asp-for="IdEnseignant" class="form-control" />
+                <span asp-validation-for="IdEnseignant" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
